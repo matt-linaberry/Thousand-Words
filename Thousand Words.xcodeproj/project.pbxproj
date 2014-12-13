@@ -10,11 +10,10 @@
 		99BA90561A3CE25F001625B0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 99BA90551A3CE25F001625B0 /* main.m */; };
 		99BA90591A3CE25F001625B0 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 99BA90581A3CE25F001625B0 /* AppDelegate.m */; };
 		99BA905C1A3CE25F001625B0 /* Thousand_Words.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 99BA905A1A3CE25F001625B0 /* Thousand_Words.xcdatamodeld */; };
-		99BA905F1A3CE25F001625B0 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 99BA905E1A3CE25F001625B0 /* ViewController.m */; };
-		99BA90621A3CE25F001625B0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 99BA90601A3CE25F001625B0 /* Main.storyboard */; };
 		99BA90641A3CE25F001625B0 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 99BA90631A3CE25F001625B0 /* Images.xcassets */; };
-		99BA90671A3CE25F001625B0 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 99BA90651A3CE25F001625B0 /* LaunchScreen.xib */; };
 		99BA90731A3CE25F001625B0 /* Thousand_WordsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 99BA90721A3CE25F001625B0 /* Thousand_WordsTests.m */; };
+		99BA907D1A3CE434001625B0 /* Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 99BA907C1A3CE434001625B0 /* Storyboard.storyboard */; };
+		99BA90801A3CE4DB001625B0 /* TWAlbumTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 99BA907F1A3CE4DB001625B0 /* TWAlbumTableViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,14 +33,13 @@
 		99BA90571A3CE25F001625B0 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		99BA90581A3CE25F001625B0 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		99BA905B1A3CE25F001625B0 /* Thousand_Words.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Thousand_Words.xcdatamodel; sourceTree = "<group>"; };
-		99BA905D1A3CE25F001625B0 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		99BA905E1A3CE25F001625B0 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		99BA90611A3CE25F001625B0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		99BA90631A3CE25F001625B0 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		99BA90661A3CE25F001625B0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		99BA906C1A3CE25F001625B0 /* Thousand WordsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Thousand WordsTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		99BA90711A3CE25F001625B0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		99BA90721A3CE25F001625B0 /* Thousand_WordsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Thousand_WordsTests.m; sourceTree = "<group>"; };
+		99BA907C1A3CE434001625B0 /* Storyboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Storyboard.storyboard; sourceTree = "<group>"; };
+		99BA907E1A3CE4DB001625B0 /* TWAlbumTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TWAlbumTableViewController.h; sourceTree = "<group>"; };
+		99BA907F1A3CE4DB001625B0 /* TWAlbumTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TWAlbumTableViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,15 +81,12 @@
 		99BA90521A3CE25F001625B0 /* Thousand Words */ = {
 			isa = PBXGroup;
 			children = (
-				99BA90571A3CE25F001625B0 /* AppDelegate.h */,
-				99BA90581A3CE25F001625B0 /* AppDelegate.m */,
-				99BA905D1A3CE25F001625B0 /* ViewController.h */,
-				99BA905E1A3CE25F001625B0 /* ViewController.m */,
-				99BA90601A3CE25F001625B0 /* Main.storyboard */,
+				99BA907C1A3CE434001625B0 /* Storyboard.storyboard */,
 				99BA90631A3CE25F001625B0 /* Images.xcassets */,
-				99BA90651A3CE25F001625B0 /* LaunchScreen.xib */,
 				99BA905A1A3CE25F001625B0 /* Thousand_Words.xcdatamodeld */,
 				99BA90531A3CE25F001625B0 /* Supporting Files */,
+				99BA907E1A3CE4DB001625B0 /* TWAlbumTableViewController.h */,
+				99BA907F1A3CE4DB001625B0 /* TWAlbumTableViewController.m */,
 			);
 			path = "Thousand Words";
 			sourceTree = "<group>";
@@ -99,6 +94,8 @@
 		99BA90531A3CE25F001625B0 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				99BA90571A3CE25F001625B0 /* AppDelegate.h */,
+				99BA90581A3CE25F001625B0 /* AppDelegate.m */,
 				99BA90541A3CE25F001625B0 /* Info.plist */,
 				99BA90551A3CE25F001625B0 /* main.m */,
 			);
@@ -202,9 +199,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				99BA90621A3CE25F001625B0 /* Main.storyboard in Resources */,
-				99BA90671A3CE25F001625B0 /* LaunchScreen.xib in Resources */,
 				99BA90641A3CE25F001625B0 /* Images.xcassets in Resources */,
+				99BA907D1A3CE434001625B0 /* Storyboard.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -224,7 +220,7 @@
 			files = (
 				99BA90591A3CE25F001625B0 /* AppDelegate.m in Sources */,
 				99BA90561A3CE25F001625B0 /* main.m in Sources */,
-				99BA905F1A3CE25F001625B0 /* ViewController.m in Sources */,
+				99BA90801A3CE4DB001625B0 /* TWAlbumTableViewController.m in Sources */,
 				99BA905C1A3CE25F001625B0 /* Thousand_Words.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -246,25 +242,6 @@
 			targetProxy = 99BA906D1A3CE25F001625B0 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
-
-/* Begin PBXVariantGroup section */
-		99BA90601A3CE25F001625B0 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				99BA90611A3CE25F001625B0 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		99BA90651A3CE25F001625B0 /* LaunchScreen.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				99BA90661A3CE25F001625B0 /* Base */,
-			);
-			name = LaunchScreen.xib;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		99BA90741A3CE25F001625B0 /* Debug */ = {

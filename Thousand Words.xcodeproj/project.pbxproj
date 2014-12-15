@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		995DC51C1A3E7FEE0091A63E /* Album.m in Sources */ = {isa = PBXBuildFile; fileRef = 995DC51B1A3E7FEE0091A63E /* Album.m */; };
 		99BA90561A3CE25F001625B0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 99BA90551A3CE25F001625B0 /* main.m */; };
 		99BA90591A3CE25F001625B0 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 99BA90581A3CE25F001625B0 /* AppDelegate.m */; };
 		99BA905C1A3CE25F001625B0 /* Thousand_Words.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 99BA905A1A3CE25F001625B0 /* Thousand_Words.xcdatamodeld */; };
@@ -27,6 +28,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		995DC51A1A3E7FEE0091A63E /* Album.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Album.h; sourceTree = "<group>"; };
+		995DC51B1A3E7FEE0091A63E /* Album.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Album.m; sourceTree = "<group>"; };
 		99BA90501A3CE25F001625B0 /* Thousand Words.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Thousand Words.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		99BA90541A3CE25F001625B0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		99BA90551A3CE25F001625B0 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -84,6 +87,8 @@
 				99BA907C1A3CE434001625B0 /* Storyboard.storyboard */,
 				99BA90631A3CE25F001625B0 /* Images.xcassets */,
 				99BA905A1A3CE25F001625B0 /* Thousand_Words.xcdatamodeld */,
+				995DC51A1A3E7FEE0091A63E /* Album.h */,
+				995DC51B1A3E7FEE0091A63E /* Album.m */,
 				99BA90531A3CE25F001625B0 /* Supporting Files */,
 				99BA907E1A3CE4DB001625B0 /* TWAlbumTableViewController.h */,
 				99BA907F1A3CE4DB001625B0 /* TWAlbumTableViewController.m */,
@@ -221,6 +226,7 @@
 				99BA90591A3CE25F001625B0 /* AppDelegate.m in Sources */,
 				99BA90561A3CE25F001625B0 /* main.m in Sources */,
 				99BA90801A3CE4DB001625B0 /* TWAlbumTableViewController.m in Sources */,
+				995DC51C1A3E7FEE0091A63E /* Album.m in Sources */,
 				99BA905C1A3CE25F001625B0 /* Thousand_Words.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -393,6 +399,7 @@
 				99BA90781A3CE25F001625B0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		99BA90791A3CE25F001625B0 /* Build configuration list for PBXNativeTarget "Thousand WordsTests" */ = {
 			isa = XCConfigurationList;
@@ -401,6 +408,7 @@
 				99BA907B1A3CE25F001625B0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

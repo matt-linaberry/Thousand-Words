@@ -14,6 +14,9 @@
 
 @implementation TWAlbumTableViewController
 
+- (IBAction)addAlbumBarButtonItemPressed:(id)sender {
+}
+
 -(NSMutableArray *) albums
 {
     if (!_albums)

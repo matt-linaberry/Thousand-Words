@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="Z4f-oK-bAR">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="Z4f-oK-bAR">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
     </dependencies>
     <scenes>
         <!--Album Table View Controller-->
@@ -25,7 +25,13 @@
                             <outlet property="delegate" destination="uEh-1c-A5M" id="11f-5G-pqt"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="9f9-zi-ofE"/>
+                    <navigationItem key="navigationItem" id="9f9-zi-ofE">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="AoZ-KZ-b8X">
+                            <connections>
+                                <action selector="addAlbumBarButtonItemPressed:" destination="uEh-1c-A5M" id="7GH-0U-dXc"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KNW-av-Wc7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

@@ -14,7 +14,12 @@
 
 @implementation TWAlbumTableViewController
 
-- (IBAction)addAlbumBarButtonItemPressed:(id)sender {
+- (IBAction)addAlbumBarButtonItemPressed:(id)sender
+{
+    UIAlertView *newAlbumAlertView = [[UIAlertView alloc] initWithTitle:@"Enter New Album Name" message:nil delegate:self cancelButtonTitle:@"Cancel" otherButtonTitles:@"Add", nil];
+    // the delegate is needed to handle the other button titles
+    [newAlbumAlertView setAlertViewStyle:UIAlertViewStylePlainTextInput];
+    [newAlbumAlertView show];
 }
 
 -(NSMutableArray *) albums
@@ -39,6 +44,16 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+#pragma mark - UIAlertView delegate
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
+{
+    if (buttonIndex == 1)
+    {
+        NSString *alertText = [alertView textFieldAtIndex:0].text;
+        NSLog(@"My new album is %@", alertText);
+    }
 }
 
 #pragma mark - Table view data source

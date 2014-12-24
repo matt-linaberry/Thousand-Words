@@ -9,5 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface TWPhotosCollectionViewController : UICollectionViewController
+- (IBAction)cameraBarButtonItemPressed:(UIBarButtonItem *)sender;
 
 @end

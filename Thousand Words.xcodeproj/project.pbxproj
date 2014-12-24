@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		995DC51C1A3E7FEE0091A63E /* Album.m in Sources */ = {isa = PBXBuildFile; fileRef = 995DC51B1A3E7FEE0091A63E /* Album.m */; };
+		998276131A4A680A00B83708 /* TWPhotoCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 998276121A4A680A00B83708 /* TWPhotoCollectionViewCell.m */; };
+		998276151A4A6A2400B83708 /* Astronaut.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 998276141A4A6A2400B83708 /* Astronaut.jpg */; };
 		99A673241A4620D8008069DD /* TWCoreDataHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 99A673231A4620D8008069DD /* TWCoreDataHelper.m */; };
 		99A673271A462807008069DD /* TWPhotosCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 99A673261A462807008069DD /* TWPhotosCollectionViewController.m */; };
 		99BA90561A3CE25F001625B0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 99BA90551A3CE25F001625B0 /* main.m */; };
@@ -32,6 +34,9 @@
 /* Begin PBXFileReference section */
 		995DC51A1A3E7FEE0091A63E /* Album.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Album.h; sourceTree = "<group>"; };
 		995DC51B1A3E7FEE0091A63E /* Album.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Album.m; sourceTree = "<group>"; };
+		998276111A4A680A00B83708 /* TWPhotoCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TWPhotoCollectionViewCell.h; sourceTree = "<group>"; };
+		998276121A4A680A00B83708 /* TWPhotoCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TWPhotoCollectionViewCell.m; sourceTree = "<group>"; };
+		998276141A4A6A2400B83708 /* Astronaut.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Astronaut.jpg; sourceTree = "<group>"; };
 		99A673221A4620D8008069DD /* TWCoreDataHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TWCoreDataHelper.h; sourceTree = "<group>"; };
 		99A673231A4620D8008069DD /* TWCoreDataHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TWCoreDataHelper.m; sourceTree = "<group>"; };
 		99A673251A462807008069DD /* TWPhotosCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TWPhotosCollectionViewController.h; sourceTree = "<group>"; };
@@ -91,6 +96,8 @@
 			isa = PBXGroup;
 			children = (
 				99BA907C1A3CE434001625B0 /* Storyboard.storyboard */,
+				998276111A4A680A00B83708 /* TWPhotoCollectionViewCell.h */,
+				998276121A4A680A00B83708 /* TWPhotoCollectionViewCell.m */,
 				99A673251A462807008069DD /* TWPhotosCollectionViewController.h */,
 				99A673261A462807008069DD /* TWPhotosCollectionViewController.m */,
 				99BA90631A3CE25F001625B0 /* Images.xcassets */,
@@ -109,6 +116,7 @@
 		99BA90531A3CE25F001625B0 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				998276141A4A6A2400B83708 /* Astronaut.jpg */,
 				99BA90571A3CE25F001625B0 /* AppDelegate.h */,
 				99BA90581A3CE25F001625B0 /* AppDelegate.m */,
 				99BA90541A3CE25F001625B0 /* Info.plist */,
@@ -216,6 +224,7 @@
 			files = (
 				99BA90641A3CE25F001625B0 /* Images.xcassets in Resources */,
 				99BA907D1A3CE434001625B0 /* Storyboard.storyboard in Resources */,
+				998276151A4A6A2400B83708 /* Astronaut.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -235,6 +244,7 @@
 			files = (
 				99BA90591A3CE25F001625B0 /* AppDelegate.m in Sources */,
 				99A673271A462807008069DD /* TWPhotosCollectionViewController.m in Sources */,
+				998276131A4A680A00B83708 /* TWPhotoCollectionViewCell.m in Sources */,
 				99BA90561A3CE25F001625B0 /* main.m in Sources */,
 				99BA90801A3CE4DB001625B0 /* TWAlbumTableViewController.m in Sources */,
 				995DC51C1A3E7FEE0091A63E /* Album.m in Sources */,

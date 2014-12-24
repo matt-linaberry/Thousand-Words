@@ -7,7 +7,7 @@
 //
 
 #import "TWPhotosCollectionViewController.h"
-
+#import "TWPhotoCollectionViewCell.h"
 @interface TWPhotosCollectionViewController ()
 
 @end
@@ -60,9 +60,10 @@ static NSString * const reuseIdentifier = @"Cell";
     
     // Configure the cell
     static NSString *cellIdentifier = @"Photo Cell";
-    UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:cellIdentifier forIndexPath:indexPath];
+    TWPhotoCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:cellIdentifier forIndexPath:indexPath];
     
     cell.backgroundColor = [UIColor whiteColor];
+    cell.imageView.image = [UIImage imageNamed:@"Astronaut.jpg"];
     return cell;
 }
 
@@ -97,4 +98,17 @@ static NSString * const reuseIdentifier = @"Cell";
 }
 */
 
+- (IBAction)cameraBarButtonItemPressed:(UIBarButtonItem *)sender {
+    UIImagePickerController *picker = [[UIImagePickerController alloc ] init];
+    picker.delegate = self;
+    if ([UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera])
+    {
+        picker.sourceType = UIImagePickerControllerSourceTypeCamera;
+    }
+    else if ([UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeSavedPhotosAlbum])
+    {
+        picker.sourceType = UIImagePickerControllerSourceTypeSavedPhotosAlbum;
+    }
+    [self presentViewController:picker animated:YES completion:nil];
+}
 @end

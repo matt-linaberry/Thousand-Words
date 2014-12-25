@@ -8,12 +8,23 @@
 
 #import "TWPhotosCollectionViewController.h"
 #import "TWPhotoCollectionViewCell.h"
-@interface TWPhotosCollectionViewController ()
-
+#import "Photo.h"
+#import "TWPictureDataTransformer.h"
+#import "TWCoreDataHelper.h"
+@interface TWPhotosCollectionViewController () <UIImagePickerControllerDelegate, UINavigationControllerDelegate>
+@property (strong, nonatomic) NSMutableArray *photos;
 @end
 
 @implementation TWPhotosCollectionViewController
 
+-(NSMutableArray *) photos
+{
+    if (!_photos)
+    {
+        _photos = [[NSMutableArray alloc] init];
+    }
+    return _photos;
+}
 static NSString * const reuseIdentifier = @"Cell";
 
 - (void)viewDidLoad {
@@ -53,7 +64,7 @@ static NSString * const reuseIdentifier = @"Cell";
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
 #warning Incomplete method implementation -- Return the number of items in the section
-    return 5;
+    return [self.photos count];
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
@@ -61,9 +72,10 @@ static NSString * const reuseIdentifier = @"Cell";
     // Configure the cell
     static NSString *cellIdentifier = @"Photo Cell";
     TWPhotoCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:cellIdentifier forIndexPath:indexPath];
+    Photo *photo = self.photos[indexPath.row];
     
     cell.backgroundColor = [UIColor whiteColor];
-    cell.imageView.image = [UIImage imageNamed:@"Astronaut.jpg"];
+    cell.imageView.image = photo.image;
     return cell;
 }
 
@@ -98,6 +110,24 @@ static NSString * const reuseIdentifier = @"Cell";
 }
 */
 
+#pragma mark - helpers
+-(Photo *)photoFromImage:(UIImage *)image
+{
+    Photo *photo = [NSEntityDescription insertNewObjectForEntityForName:@"Photo" inManagedObjectContext:[TWCoreDataHelper managedObjectContext]];
+    photo.image = image;
+    photo.date = [NSDate date];
+    photo.albumBook = self.album;
+    
+    // presist this to core data
+    NSError *error = nil;
+    if (![[photo managedObjectContext] save:&error])
+    {
+        // if this save returns a failure!
+        NSLog(@"Well: %@", error);
+    }
+    return photo;
+}
+
 - (IBAction)cameraBarButtonItemPressed:(UIBarButtonItem *)sender {
     UIImagePickerController *picker = [[UIImagePickerController alloc ] init];
     picker.delegate = self;
@@ -110,5 +140,25 @@ static NSString * const reuseIdentifier = @"Cell";
         picker.sourceType = UIImagePickerControllerSourceTypeSavedPhotosAlbum;
     }
     [self presentViewController:picker animated:YES completion:nil];
+}
+
+#pragma mark - UIImagePickerControllerDelegate
+-(void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info
+{
+    UIImage *image = info[UIImagePickerControllerEditedImage];  // pick the photo selected/edited/taken
+    if (!image)
+    {
+        image = info[UIImagePickerControllerOriginalImage];  // just do the original image taken... we can edit it!
+    }
+    
+    [self.photos addObject:[self photoFromImage:image]];
+    
+    [self.collectionView reloadData];
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
+
+-(void)imagePickerControllerDidCancel:(UIImagePickerController *)picker
+{
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 @end

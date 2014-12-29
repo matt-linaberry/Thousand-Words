@@ -9,6 +9,7 @@
 #import "TWAlbumTableViewController.h"
 #import "Album.h"
 #import "TWCoreDataHelper.h"
+#import "TWPhotosCollectionViewController.h"
 
 @interface TWAlbumTableViewController ()
 
@@ -153,14 +154,21 @@
 }
 */
 
-/*
+
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+    if ([segue.identifier isEqualToString:@"Album Chosen"]) {
+        if ([segue.destinationViewController isKindOfClass:[TWPhotosCollectionViewController class]])
+        {
+            NSIndexPath *path = [self.tableView indexPathForSelectedRow];
+            
+            TWPhotosCollectionViewController *targetVC = segue.destinationViewController;
+            targetVC.album = self.albums[path.row];
+        }
+    }
 }
-*/
+
 
 @end

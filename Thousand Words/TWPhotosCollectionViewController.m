@@ -11,6 +11,8 @@
 #import "Photo.h"
 #import "TWPictureDataTransformer.h"
 #import "TWCoreDataHelper.h"
+#import "TWPhotoViewController.h"
+
 @interface TWPhotosCollectionViewController () <UIImagePickerControllerDelegate, UINavigationControllerDelegate>
 @property (strong, nonatomic) NSMutableArray *photos;
 @end
@@ -33,10 +35,23 @@ static NSString * const reuseIdentifier = @"Cell";
     // Uncomment the following line to preserve selection between presentations
     // self.clearsSelectionOnViewWillAppear = NO;
     
+
+}
+
+-(void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:YES];
     // Register cell classes
     [self.collectionView registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:reuseIdentifier];
     
     // Do any additional setup after loading the view.
+    NSSet *unorderedPhotos = self.album.photos;
+    NSSortDescriptor *dateDescriptor = [NSSortDescriptor sortDescriptorWithKey:@"date" ascending:YES];
+    NSArray *sortedPhotos = [unorderedPhotos sortedArrayUsingDescriptors:@[dateDescriptor]];
+    
+    self.photos = [sortedPhotos mutableCopy];
+    
+    [self.collectionView reloadData];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -44,15 +59,25 @@ static NSString * const reuseIdentifier = @"Cell";
     // Dispose of any resources that can be recreated.
 }
 
-/*
+
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
+    if ([segue.identifier isEqualToString:@"Detail Segue"])
+    {
+        if ([segue.destinationViewController isKindOfClass:[TWPhotoViewController class]])
+        {
+            TWPhotoViewController *targetVC = segue.destinationViewController;
+            NSIndexPath *indexPath = [[self.collectionView indexPathsForSelectedItems] lastObject];
+            Photo *selectedPhoto = self.photos[indexPath.row];
+            targetVC.photo = selectedPhoto;
+        }
+    }
 }
-*/
+
 
 #pragma mark <UICollectionViewDataSource>
 

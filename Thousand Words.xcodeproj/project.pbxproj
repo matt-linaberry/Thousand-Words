@@ -22,6 +22,7 @@
 		99BA907D1A3CE434001625B0 /* Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 99BA907C1A3CE434001625B0 /* Storyboard.storyboard */; };
 		99BA90801A3CE4DB001625B0 /* TWAlbumTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 99BA907F1A3CE4DB001625B0 /* TWAlbumTableViewController.m */; };
 		A31FCE6F1A51F97100AE0E56 /* TWPhotoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A31FCE6E1A51F97100AE0E56 /* TWPhotoViewController.m */; };
+		A32B675D1A532E2900F11181 /* TWFiltersCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A32B675C1A532E2900F11181 /* TWFiltersCollectionViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +64,8 @@
 		99BA907F1A3CE4DB001625B0 /* TWAlbumTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TWAlbumTableViewController.m; sourceTree = "<group>"; };
 		A31FCE6D1A51F97100AE0E56 /* TWPhotoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TWPhotoViewController.h; sourceTree = "<group>"; };
 		A31FCE6E1A51F97100AE0E56 /* TWPhotoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TWPhotoViewController.m; sourceTree = "<group>"; };
+		A32B675B1A532E2900F11181 /* TWFiltersCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TWFiltersCollectionViewController.h; sourceTree = "<group>"; };
+		A32B675C1A532E2900F11181 /* TWFiltersCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TWFiltersCollectionViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,6 +122,8 @@
 			children = (
 				9987AAE91A4B64EB00F32FD6 /* CoreData */,
 				99BA907C1A3CE434001625B0 /* Storyboard.storyboard */,
+				A32B675B1A532E2900F11181 /* TWFiltersCollectionViewController.h */,
+				A32B675C1A532E2900F11181 /* TWFiltersCollectionViewController.m */,
 				A31FCE6D1A51F97100AE0E56 /* TWPhotoViewController.h */,
 				A31FCE6E1A51F97100AE0E56 /* TWPhotoViewController.m */,
 				998276111A4A680A00B83708 /* TWPhotoCollectionViewCell.h */,
@@ -266,6 +271,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				99BA90591A3CE25F001625B0 /* AppDelegate.m in Sources */,
+				A32B675D1A532E2900F11181 /* TWFiltersCollectionViewController.m in Sources */,
 				9987AAEC1A4B655900F32FD6 /* TWPictureDataTransformer.m in Sources */,
 				A31FCE6F1A51F97100AE0E56 /* TWPhotoViewController.m in Sources */,
 				99A673271A462807008069DD /* TWPhotosCollectionViewController.m in Sources */,
